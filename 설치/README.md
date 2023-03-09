@@ -36,4 +36,5 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 ~~~
 
 입력을 해주면되는데 Enable이 설정이 안되어있는 경우가 있다 그러한 오류가 발생시 밑 URL을 참고하여 저자는 고치게 오류를 수정하게 되었다.
-https://monstergreen.tistory.com/242
+
+> https://monstergreen.tistory.com/242
