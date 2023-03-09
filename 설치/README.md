@@ -22,9 +22,9 @@ window의 경우
 
 2. window 10 Home -> WSL2가 필수
 
-WSL을 설치하여도 도커실행시
+WSL을 설치하여도 도커실행시 이러한 오류가 발생할 수 있다.
 ![image](https://user-images.githubusercontent.com/54052704/224153950-91d94f16-e58b-4719-8f8e-a52b3d7a2d14.png)
-이러한 오류가 발생할 수 있다.
+
 
 -> 이러한 경우이기에 그냥 hyper-v를 설치하여 hyper-v 기능을 활성화하였다.
 
