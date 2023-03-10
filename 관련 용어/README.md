@@ -89,3 +89,46 @@
 > 대부분의 사용자들은 쿠버네티스에서 정의한 템플릿으로 .yaml 타입의 파일을 작성 후 커맨드-라인 툴을 이용
 
 -> kubectl은 이 .yaml을 JSON형태로 변환 kube-api-server에 API 리퀘스트 요청
+
+> YAML? email 양식에서 개념을 얻어 사람이 쉽게 읽을 수 있는 데이터 직렬화 양식( __쿠버네티스의 오브젝트를 관리하기위한 형식__ )
+
+기본 템플릿 양식
+
+~~~
+---
+# comment
+apiVersion : (쿠버네티스의 API 버전 설정)
+kind : (오브젝트 종류 : Pod, Deployment, Service 등)
+metadata : (메타정보 설정 : 이름이나 레이블)
+spec : (파드의 컨테이너 생성정보 설정)
+~~~
+
+예제 : nginx를 2개의 파드로 실행시키는 디플로이먼트 예제
+~~~
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 2 # 템플릿에 매칭되는 파드 2개를 구동하는 디프로이 먼트
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80
+~~~
+
+오브젝트 템플릿들이 사용하는 필드들을 알려면
+
+~~~
+kubectl explain {오브젝트 타입명}
+~~~
+
