@@ -6,17 +6,16 @@
 
 ---
 
-# 가상 머신(VM) vs 컨테이너
 
-![image](https://user-images.githubusercontent.com/54052704/223016571-340cbfc7-9c2f-4253-8d0f-81088231b73e.png)
+
+# 가상 머신(VM) vs 컨테이너
 
 ## 가상 머신 (VM)
 
 - __물리적 하드웨어를 가상화__ 합니다.
 - 각각의 VM에서는 __애플리케이션, 이와 연관된 라이브러리 및 종속 항목__ 과 함께 OS가 실행해야 하는 하드웨어의 가상 사본인 __게스트 OS__ 가 포함된다.
 
-![image](https://user-images.githubusercontent.com/54052704/224264276-fd7ea80d-a954-4d84-af4b-3146fc51dda7.png)
-
+![image](https://user-images.githubusercontent.com/54052704/223016571-340cbfc7-9c2f-4253-8d0f-81088231b73e.png)
 
 ## 컨테이너
 
